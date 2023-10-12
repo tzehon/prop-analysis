@@ -1,0 +1,8 @@
+#!/bin/bash
+
+REPO=
+TAG=
+URL=$REPO:$TAG
+PORT=
+REGION=
+SERVICE_NAME=
