@@ -8,7 +8,7 @@ docker build . --tag $URL --platform linux/amd64
 Push to remote repo:
 ```
 docker push $URL
-``
+```
 
 Run with Docker:
 ```
