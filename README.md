@@ -5,7 +5,7 @@ Fill in your envvars in env.sh and source them:
 source env.sh
 ```
 
-Build locally with Docker (linux/amd64 flag is needed for building on M1):
+Build locally with Docker (linux/amd64 flag is needed for building on Apple silicon):
 ```
 docker build . --tag $TF_VAR_url --platform linux/amd64
 ```
