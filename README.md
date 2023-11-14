@@ -27,7 +27,7 @@ terraform plan
 terraform apply
 ```
 
-Test Cloud Run service locally:
+Test authenticated Cloud Run service locally:
 ```
  curl -H "Authorization: Bearer $(gcloud auth print-identity-token)" <SERVICE_URL>
 ```
