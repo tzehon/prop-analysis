@@ -1,21 +1,28 @@
 README
 -------------
+Fill in your envvars in env.sh and source them:
+```
+source env.sh
+```
+
 Build locally with Docker (linux/amd64 flag is needed for building on M1):
 ```
-docker build . --tag $URL --platform linux/amd64
+docker build . --tag $TF_VAR_url --platform linux/amd64
 ```
 
 Push to remote repo:
 ```
-docker push $URL
+docker push $TF_VAR_url
 ```
 
 Run with Docker:
 ```
-docker run -p 9090:$PORT -e PORT=$PORT $URL
+docker run -p 9090:$PORT -e PORT=$PORT $TF_VAR_url
 ```
 
-Run on Cloud Run:
+Deploy on Cloud Run:
 ```
-gcloud run deploy $SERVICE_NAME --image $URL --region $REGION --platform managed
+cd scheduler
+terraform plan
+terraform apply
 ```
