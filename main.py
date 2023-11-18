@@ -9,6 +9,7 @@ app = Flask(__name__)
 def hello_world():
     """Example Hello World route."""
     name = os.environ.get("NAME", "World")
+    print(name)
     return f"Hello {name}!"
 
 
