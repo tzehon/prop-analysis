@@ -55,6 +55,7 @@ resource "google_cloud_run_service_iam_member" "default" {
   member   = "serviceAccount:${google_service_account.default.email}"
 }
 
+# Run every Sunday at 6am SGT
 resource "google_cloud_scheduler_job" "default" {
   name             = "scheduled-cloud-run-job"
   region           = var.region
@@ -76,7 +77,6 @@ resource "google_cloud_scheduler_job" "default" {
     }
   }
 
-  # Use an explicit depends_on clause to wait until API is enabled
   depends_on = [
     google_project_service.scheduler_api
   ]
