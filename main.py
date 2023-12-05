@@ -8,6 +8,7 @@ app = Flask(__name__)
 @app.route("/")
 def pull_data():
     access_key = os.getenv('ACCESS_KEY')
+    print("access key: {access_key}")
     return f"access key: {access_key}"
 
 if __name__ == "__main__":
