@@ -12,7 +12,7 @@ docker build . --tag $TF_VAR_url --platform linux/amd64
 
 Run with Docker:
 ```
-docker run -p 9090:$PORT -e PORT=$PORT $TF_VAR_url
+docker run -p 9090:$PORT -e PORT=$PORT -e ACCESS_KEY=$ACCESS_KEY $TF_VAR_url
 ```
 
 Push to remote repo:

@@ -6,12 +6,9 @@ app = Flask(__name__)
 
 
 @app.route("/")
-def hello_world():
-    """Example Hello World route."""
-    name = os.environ.get("NAME", "World")
-    print(name)
-    return f"Hello {name}, welcome to the world!"
-
+def pull_data():
+    access_key = os.getenv('ACCESS_KEY')
+    return f"access key: {access_key}"
 
 if __name__ == "__main__":
     app.run(debug=True, host="0.0.0.0", port=int(os.environ.get("PORT", 8080)))
