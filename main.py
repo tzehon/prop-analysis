@@ -5,7 +5,6 @@ from flask import Flask
 
 app = Flask(__name__)
 
-
 @app.route("/")
 def pull_data():
     response = requests.get('https://curlmyip.org/')
