@@ -7,17 +7,17 @@ source env.sh
 
 Build locally with Docker (linux/amd64 flag is needed for building on Apple silicon):
 ```
-docker build . --tag $TF_VAR_url --platform linux/amd64
+docker build . --tag $URL --platform linux/amd64
 ```
 
 Run with Docker:
 ```
-docker run -p 9090:$PORT -e PORT=$PORT -e ACCESS_KEY=$ACCESS_KEY $TF_VAR_url
+docker run -p 9090:$PORT -e PORT=$PORT -e ACCESS_KEY=$ACCESS_KEY $URL
 ```
 
 Push to remote repo:
 ```
-docker push $TF_VAR_url
+docker push $URL
 ```
 
 Test authenticated Cloud Run service locally:
