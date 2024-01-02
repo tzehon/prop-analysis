@@ -2,7 +2,16 @@ import os
 
 from pymongo import MongoClient
 
-client = MongoClient(os.environ.get("ATLAS_CONNECTION_STRING"))
+username = os.environ.get("ATLAS_USER", None)
+password = os.environ.get("ATLAS_PASSWORD", None)
+
+if username and password:
+    client = MongoClient(os.environ.get("ATLAS_CONNECTION_STRING"),username=username, password=password)
+    print("USING REMOTE DB")
+else:
+    client = MongoClient(os.environ.get("ATLAS_CONNECTION_STRING"))
+    print("USING LOCAL DB")
+
 db = client["ura"]
 collection = db["transactions"]
 
