@@ -18,7 +18,6 @@ def pull_data():
         transactions = ura.get_transactions(access_key, token, batch)
         transactions_inserted += mongo.insert_transactions(transactions)
 
-    mongo.close()
     print(f"TOTAL TRANSACTIONS INSERTED: {transactions_inserted}")
     return f"TOTAL TRANSACTIONS INSERTED: {transactions_inserted}"
 
