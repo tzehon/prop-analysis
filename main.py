@@ -15,6 +15,7 @@ def pull_data():
     for batch in ura.batches:
         transactions = ura.get_transactions(access_key, token, batch)
         num_transactions += ura.save_transactions(transactions)
+    print(f"NUM TRANSACTIONS: {num_transactions}")
     return f"NUM TRANSACTIONS: {num_transactions}"
 
 if __name__ == "__main__":
