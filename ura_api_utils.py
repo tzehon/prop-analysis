@@ -4,10 +4,6 @@ import requests
 
 batches = [1, 2, 3, 4]
 
-def save_transactions(transactions):
-    num_transactions = (len(transactions["Result"]))
-    return num_transactions
-
 def get_transactions(access_key, token, batch):
     base_url = "https://www.ura.gov.sg/uraDataService/invokeUraDS?service=PMI_Resi_Transaction&batch={batch}"
     url = base_url.format(batch=batch)

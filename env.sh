@@ -2,6 +2,9 @@
 
 export REPO=
 export TAG=
-export TF_VAR_url=$REPO:$TAG
+export URL=$REPO:$TAG
 export PORT=
 export ACCESS_KEY=
+export ATLAS_CONNECTION_STRING=
+export ATLAS_USER=
+export ATLAS_PASSWORD=
