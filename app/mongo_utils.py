@@ -24,6 +24,3 @@ def insert_transactions(transactions):
     num_documents_inserted = len(insertion_result.inserted_ids)
     print(f"Number of documents inserted: {num_documents_inserted}")
     return num_documents_inserted
-
-def close():
-    client.close()
