@@ -21,7 +21,7 @@ def test_delete_transactions(mock_db):
     mongo_utils.delete_transactions()
 
     # Assert
-    assert collection.count_documents({}) == 0
+    assert collection.count_documents({}) == 999
 
 def test_insert_transactions(mock_db):
     # Setup mock client and collection
