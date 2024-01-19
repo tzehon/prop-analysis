@@ -5,3 +5,9 @@ README.md
 *.pyd
 __pycache__
 .pytest_cache
+*.tfstate
+.gitignore
+build.sh
+run.sh
+push.sh
+env*sh
