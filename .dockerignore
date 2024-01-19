@@ -5,6 +5,7 @@ README.md
 *.pyd
 __pycache__
 .pytest_cache
+.github/workflows/*
 *.tfstate
 .gitignore
 build.sh
