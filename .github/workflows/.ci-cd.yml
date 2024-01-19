@@ -18,7 +18,7 @@ jobs:
       with:
         python-version: '3.10'
 
-    - name: Build the Docker image (Test Stage)
+    - name: Run unit tests
       run: |
         docker build . --target tester
 
