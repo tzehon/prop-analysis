@@ -18,8 +18,8 @@ def pull_data():
         transactions = ura.get_transactions(access_key, token, batch)
         transactions_inserted += mongo.insert_transactions(transactions)
 
-    print(f"URA TRANSACTIONS INSERTED: {transactions_inserted}")
-    return f"URA TRANSACTIONS INSERTED: {transactions_inserted}"
+    print(f"PRIVATE PROPERTY TRANSACTIONS INSERTED: {transactions_inserted}")
+    return f"PRIVATE PROPERTY TRANSACTIONS INSERTED: {transactions_inserted}"
 
 if __name__ == "__main__":
     app.run(debug=True, host="0.0.0.0", port=int(os.environ.get("PORT", 8080)))
