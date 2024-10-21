@@ -1,4 +1,4 @@
-README
+README - HAHA TIME
 -------------
 Fill in your envvars in env.sh and source them:
 ```
